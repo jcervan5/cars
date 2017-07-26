@@ -9,18 +9,19 @@ router.get("/car", function(request, response, next) {
     });
 });
 
-router.get("/car/:id", function(request, response, next) {
+router.get("/camaro/:id", function(request, response, next) {
   let id = request.params.id
-    queries.getOneCar(id).then(function(car){
-        response.json(car);
+    queries.getOneCar(id).then(function(camaro){
+        response.json(camaro);
     });
 });
 
-// router.post('/', function(request, response, next) {
-//   let post = req.body
-//     queries.getPost(post).then(function(car) {
-//         response.json(car);
-//     });
+router.post('/camaro', function(request, response, next) {
+  let createcar = request.body
+    queries.createCar(createcar).then(function(camaro) {
+        response.json(camaro);
+    });
+})
 
 router.get("/camaro", function(request, response, next) {
     queries.getCamaro().then(function(camaro) {

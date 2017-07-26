@@ -7,18 +7,17 @@ module.exports = {
   },
 
   getOneCar: function(id){
-          return knex('car')
+          return knex('camaro')
           .select()
           .where('id', id)
           .first()
   },
 
-  // getPost: function(post){
-  //         return knex('car')
-  //         .insert(post)
-  //         .returning('*')
-  //         .then(car)
-  // },
+  createCar: function(post){
+          return knex('camaro')
+          .insert(post)
+          .returning('*')
+  },
 
 
   getCamaro: function(){
