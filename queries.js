@@ -20,7 +20,7 @@ module.exports = {
   },
 
   editCar: function(id, edit) {
-      return knex ('camaro')
+      return knex('camaro')
       .where('id', id)
       .update(edit)
       .returning('*')

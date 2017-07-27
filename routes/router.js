@@ -26,7 +26,9 @@ router.post('/camaro', function(request, response, next) {
 router.put('/camaro/:id', function(request, response, next) {
   let id = request.params.id;
   let editcar = request.body;
+  console.log(editcar);
   queries.editCar(id, editcar).then(function(camaro) {
+    console.log(camaro);
   response.json(camaro);
   });
 });
