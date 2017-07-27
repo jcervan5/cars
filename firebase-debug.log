@@ -1,0 +1,86 @@
+[debug] [2017-07-27T20:09:35.037Z] ----------------------------------------------------------------------
+[debug] [2017-07-27T20:09:35.039Z] Command:      /usr/local/Cellar/node/8.2.1/bin/node /usr/local/bin/firebase deploy
+[debug] [2017-07-27T20:09:35.040Z] CLI Version:  3.9.1
+[debug] [2017-07-27T20:09:35.040Z] Platform:     darwin
+[debug] [2017-07-27T20:09:35.040Z] Node Version: v8.2.1
+[debug] [2017-07-27T20:09:35.040Z] Time:         Thu Jul 27 2017 14:09:35 GMT-0600 (MDT)
+[debug] [2017-07-27T20:09:35.040Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-07-27T20:09:35.054Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-07-27T20:09:35.055Z] > authorizing via signed-in user
+[debug] [2017-07-27T20:09:35.056Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-07-27T20:09:35.056Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/aTkAysQI9Xa5rijjykgK3HaOe1QmbwOSrYG3USKIbc4',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu Jul 27 2017 14:09:35 GMT-0600 (MDT)
+[debug] [2017-07-27T20:09:35.329Z] <<< HTTP RESPONSE 200
+[debug] [2017-07-27T20:09:35.341Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/camaro-7fe5e  
+ Thu Jul 27 2017 14:09:35 GMT-0600 (MDT)
+[debug] [2017-07-27T20:09:36.055Z] <<< HTTP RESPONSE 200
+[debug] [2017-07-27T20:09:36.056Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/camaro-7fe5e/tokens  
+ Thu Jul 27 2017 14:09:36 GMT-0600 (MDT)
+[debug] [2017-07-27T20:09:36.362Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'camaro-7fe5e'...
+[info] 
+[info] i  deploying database, functions, hosting
+[info] ✔  database: rules ready to deploy.
+[debug] [2017-07-27T20:09:37.043Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "dependencies": {
+    "firebase-admin": "~4.2.1",
+    "firebase-functions": "^0.5.7"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[info] i  runtimeconfig: ensuring necessary APIs are enabled...
+[debug] [2017-07-27T20:09:37.044Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/camaro-7fe5e?view=CONSUMER_VIEW  
+ Thu Jul 27 2017 14:09:37 GMT-0600 (MDT)
+[debug] [2017-07-27T20:09:37.045Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/camaro-7fe5e?view=CONSUMER_VIEW  
+ Thu Jul 27 2017 14:09:37 GMT-0600 (MDT)
+[debug] [2017-07-27T20:09:37.799Z] <<< HTTP RESPONSE 200
+[info] ✔  runtimeconfig: all necessary APIs are enabled
+[debug] [2017-07-27T20:09:37.801Z] <<< HTTP RESPONSE 200
+[warn] ⚠  functions: missing necessary APIs. Enabling now...
+[debug] [2017-07-27T20:09:37.801Z] >>> HTTP REQUEST PATCH https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/camaro-7fe5e?updateMask=usageSettings { usageSettings: { consumerEnableStatus: 'ENABLED' } } 
+ Thu Jul 27 2017 14:09:37 GMT-0600 (MDT)
+[debug] [2017-07-27T20:09:39.340Z] <<< HTTP RESPONSE 200
+[debug] [2017-07-27T20:09:49.344Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/camaro-7fe5e?view=CONSUMER_VIEW  
+ Thu Jul 27 2017 14:09:49 GMT-0600 (MDT)
+[debug] [2017-07-27T20:09:49.983Z] <<< HTTP RESPONSE 200
+[info] i  functions: waiting for APIs to activate...
+[debug] [2017-07-27T20:09:59.986Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/camaro-7fe5e?view=CONSUMER_VIEW  
+ Thu Jul 27 2017 14:09:59 GMT-0600 (MDT)
+[debug] [2017-07-27T20:10:00.631Z] <<< HTTP RESPONSE 200
+[info] i  functions: waiting for APIs to activate...
+[debug] [2017-07-27T20:10:10.638Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/camaro-7fe5e?view=CONSUMER_VIEW  
+ Thu Jul 27 2017 14:10:10 GMT-0600 (MDT)
+[debug] [2017-07-27T20:10:11.283Z] <<< HTTP RESPONSE 200
+[info] i  functions: waiting for APIs to activate...
+[debug] [2017-07-27T20:10:21.287Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/camaro-7fe5e?view=CONSUMER_VIEW  
+ Thu Jul 27 2017 14:10:21 GMT-0600 (MDT)
+[debug] [2017-07-27T20:10:21.933Z] <<< HTTP RESPONSE 200
+[info] i  functions: waiting for APIs to activate...
+[debug] [2017-07-27T20:10:31.935Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/camaro-7fe5e?view=CONSUMER_VIEW  
+ Thu Jul 27 2017 14:10:31 GMT-0600 (MDT)
+[debug] [2017-07-27T20:10:32.479Z] <<< HTTP RESPONSE 200
+[info] i  functions: waiting for APIs to activate...
+[debug] [2017-07-27T20:10:42.482Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/camaro-7fe5e?view=CONSUMER_VIEW  
+ Thu Jul 27 2017 14:10:42 GMT-0600 (MDT)
+[debug] [2017-07-27T20:10:43.196Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: all necessary APIs are enabled
+[debug] [2017-07-27T20:10:43.197Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/camaro-7fe5e  
+ Thu Jul 27 2017 14:10:43 GMT-0600 (MDT)
+[debug] [2017-07-27T20:10:43.199Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/camaro-7fe5e/apiKeys  
+ Thu Jul 27 2017 14:10:43 GMT-0600 (MDT)
+[debug] [2017-07-27T20:10:43.742Z] <<< HTTP RESPONSE 200
+[debug] [2017-07-27T20:10:43.770Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2017-07-27T20:10:45.374Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/camaro-7fe5e/configs  
+ Thu Jul 27 2017 14:10:45 GMT-0600 (MDT)
+[debug] [2017-07-27T20:10:45.985Z] <<< HTTP RESPONSE 200
+[info] i  hosting: preparing . directory for upload...
