@@ -1,3 +1,17 @@
 body {
 background-image: url("https://s-media-cache-ak0.pinimg.com/originals/e0/e0/90/e0e090c290e68f9c80df4b80c81cf6ef.jpg");
 }
+
+.form-group{
+  margin-left: 100px;
+  padding-top: 10px;
+}
+
+.form-group2{
+  margin-left: 100px;
+  padding-top: 10px;
+}
+button {
+  margin-left: 100px;
+  padding-top: 10px;
+}

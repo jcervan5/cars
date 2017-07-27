@@ -7,18 +7,30 @@ module.exports = {
   },
 
   getOneCar: function(id){
-          return knex('camaro')
-          .select()
-          .where('id', id)
-          .first()
+      return knex('camaro')
+      .select()
+      .where('id', id)
+      .first()
   },
 
   createCar: function(post){
-          return knex('camaro')
-          .insert(post)
-          .returning('*')
+      return knex('camaro')
+      .insert(post)
+      .returning('*')
   },
 
+  editCar: function(id, edit) {
+      return knex ('camaro')
+      .where('id', id)
+      .update(edit)
+      .returning('*')
+  },
+
+  deleteCar: function(id) {
+    return knex ('camaro')
+    .where('id', id)
+    .del()
+  },
 
   getCamaro: function(){
      return knex('camaro')
@@ -42,5 +54,5 @@ module.exports = {
      return knex('mustang')
     .select()
 
-  },
+  }
 };

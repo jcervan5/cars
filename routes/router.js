@@ -21,7 +21,22 @@ router.post('/camaro', function(request, response, next) {
     queries.createCar(createcar).then(function(camaro) {
         response.json(camaro);
     });
-})
+});
+
+router.put('/camaro/:id', function(request, response, next) {
+  let id = request.params.id;
+  let editcar = request.body;
+  queries.editCar(id, editcar).then(function(camaro) {
+  response.json(camaro);
+  });
+});
+
+router.delete('/camaro/:id', function(request, response, next){
+  let id = request.params.id;
+  queries.deleteCar(id).then(function(camaro){
+    response.json({message:'Camaro Deleted!'})
+  });
+});
 
 router.get("/camaro", function(request, response, next) {
     queries.getCamaro().then(function(camaro) {
